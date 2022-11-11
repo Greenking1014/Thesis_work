@@ -1,2 +1,4 @@
 .Schematic_Name
-.y_splitter(50,25,25)
+.y_splitter a(50,25,25)
+.beam_splitter b(25,25,30,20)
+ 
