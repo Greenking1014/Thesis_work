@@ -430,12 +430,12 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-  Silicon photonic circuits are becoming more relevant in AI applications. There are ways to simulate
-  a single simple silicon photonic circuit with varying manufacturing defects but when trying to
+  Silicon photonic circuits are becoming more relevant in computing and AI applications. While it is feasible to simulate
+  a single simple silicon photonic circuit with varying manufacturing defects, when trying to
   simulate larger circuits by combining multiple devices, current simulation programs 
   fail due to how complex the transfer matrix equations become. Therefore,
   it is important to build abstraction models to help with simulating complex silicon 
-  photonic circuits and building a program that will be able to run those abstraction models for analysis.
+  photonic circuits and engineering software tools that will be able to run those abstraction models for analysis.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -473,24 +473,24 @@ Photonic, Coupler, Mach-Zehnder Interferometer
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{B}{ased} on university Ph.D. student Pratishtha’s work, we know that there is a way to 
+\IEEEPARstart{B}{ased} on the work of Agnihotri et.\ al [1], we know that there is a way to 
 simulate a single silicon photonic circuit with varying manufacturing defects. When trying to
-simulate larger more, complex circuits by combining multiple silicone photonic devices, programs
-like Ansys Lumerical fail due to how complex the transfer matrix equations become. This happens frequently
+simulate larger, more, complex circuits by combining multiple silicon photonic devices, programs
+like Ansys Lumerical. Simulations fail due to how complex the transfer matrix equations become. This happens frequently
 when trying to model larger complex circuits that have an ever increasing number of photonic optical devices.
 Therefore, it is important to build abstraction models to help with simulating those 
-complex silicon photonic circuits.\par My proposal is to develop a computer program that 
-will read in an interconnected complex photonic silicon circuit and be able to 
+complex silicon photonic circuits.\par This proposal is to develop a computer program that 
+will read in an interconnected complex circuit photonic and be able to 
 simulate and synthesize them. I will need to first develop a data structure 
-for the circuits that are sinusoidal in nature to represent (matrix-based) 
+for the logic blocks in a circuit that are sinusoidal in nature to represent (matrix-based) 
 and store the transfer functions that represent the devices. With the data structure abstraction 
 in place, I can now represent the silicon photonic circuit in parts and build complex 
-circuits through abstraction. This program will be built with the Python programing language. 
-The main challenge will be studying and figuring out the most appropriate data 
-structure that can be integrated to read and create the circuits with the Computer Aided Design (CAD) tools within the project. 
+circuits through a netlist. This program will be built with the Python programing language. 
+The toughest challenge will be finding the data structure design that is the most appropriate
+and can be integrated to read and create the circuits with the Computer Aided Design (CAD) tools within the project. 
 One of the benefits of my program will be representing any known manufacturing defect of a silicon 
 photonic circuit and run an algorithm to determine the best location within the circuit 
-to do post-fabrication tuning (affecting reflective index). This will Improve yield 
+to do post-fabrication tuning (affecting reflective index). This will improve yield 
 and reduce cost for silicon photonic circuits.
 
 % You must have at least 2 lines in the paragraph with the drop letter
@@ -502,17 +502,17 @@ Efforts are needed to develop defect models, tests, and validation procedures [1
 These silicon photonic devices are sensitive to changes in the manufacturing process and defects 
 can occur in these devices at a very small scale. It can geometrically change the circuit design 
 which will affect the refractive index of waveguides and potentially cause the circuit to 
-malfunction[1].
+malfunction [1].
 \par Photonic silicon circuits can be modeled and represented through transfer matrix
   equations [1]. To do this, more parameters can be added to the optical circuits.
   The parameters can also be added to transfer matrices as phase modulators. By creating simulations 
   of these photonic optical devices, you can represent manufacturing defects and simulate 
   the behavior of the circuits as well as determine the best place to make fixes within the circuit. 
-\par In order to create these circuits, you can use optical switching devices,
-  such as the crossbar design and a Mach-Zehnder Interferometer (MZI) design as shown in Fig. 1.
+\par In order to create these circuits, one can use optical switching devices,
+  such as crossbar and Mach-Zehnder Interferometers (MZI) as shown in Fig. 1.
   With these designs, you can apply logic synthesis methodologies for 
   large-scale optical circuits [2].  There have been other simulations created for
-  single optical devices that have shown success in reading the circuit performance.
+  single optical devices that have shown success in efficiently evaluating the circuit performance.
   This also allows us to change parameters which correlate to how the circuit performs,
   showing that this work can be extended to large scale photonic circuit simulations [3].
 
@@ -524,33 +524,34 @@ malfunction[1].
   \end{figure}
 
 \section{Proposal}
-Building this python program that will be able to read silicone
+Building this python program that will be able to read silicon
 photonic circuits will help researchers simulate and verify how well these
 circuits work. Also by implementing debugging tools, researchers will be able
 to find focal points in the circuit that need to be modified to improve the output.
 This program will be very useful to many researchers by giving them the opportunity 
-to test out their circuits and make design improvements to be manufactured. This program
+to test out their circuits and make design improvements. This program
 will be helpful with post-fabrication tuning when circuits have any manufacturing defects
-and in return will improve yield and reduce cost for silicon photonic circuits.
+and in return will improve yield and reduce cost for silicon photonic circuits. This approach
+brings design-for-test to Si-photonics.
 \subsection{Project Tasks}
 During this upcoming fall semester, I will need to develop the data structure that will 
 represent the silicon photonic devices. These devices and their operations can be
 represented by a transfer matrix. Once this data structure is developed, I will move 
-onto being able to read a file format containing multiple transfer matrices and building the 
-circuit from it. Once the program can read in silicon photonic circuit files and successfully
+onto being able to read a file format containing multiple transfer matrices and composing
+a TM model for a complex si-photonic circuit.
+ Once the program can read in silicon photonic circuit files and successfully
 build them and simulate them, I will want to start building the debugging tools. One tool
 that will be useful is implementing a topological sorting algorithm that will find any point
-within the circuit where weak output signals appear.This will help the user know where to 
-modify the circuit for better output results.
+within the circuit where weak output signals appear, i.e. weak controllability or observability.
+This will help the user know where to modify the circuit for better output results.
 \subsection{Management and Communication} 
 I plan to spend about 8 hours every week working 
-on the project will be reporting to Professor Priyank Kalla.
-Progress updates will also be emailed to Professor Ken Stevens on a weekly basis.
+on the project and I will be reporting to Professor Priyank Kalla.
 A planned out Schedule will be followed to ensure progress is made for this project.  
 \subsection{Milestones}
 \subsubsection*{Milestone 1} I plan to research and experiment with different 
 data structures that I find best fitting to represent and hold photonic 
-circuit’s transfer matrix equations. This will also include choosing the 
+circuit's transfer matrix equations. This will also include choosing the 
 best programming language that will allow me to create my program with 
 the most efficiency possible. I also will be developing the file type 
 needed to store these circuits that can also be read from by a program.  
@@ -565,20 +566,22 @@ part of my program into smaller parts so that I do not overwhelm myself
 by trying to write different parts of the program at the same time. 
 Finishing the first small instance of my program which will be the 
 data structure system and file read/write process. 
-\subsubsection*{Milestone 4}I will move on to the next part of the program
-which will be to visually represent the circuit I read from a file to 
-the user in the program through a graphical user interface (GUI). 
-I want the GUI to show the design of the circuit and outline the different 
-parts within the circuit so the user can see each optical device within it. 
-I also want to display any important information about the circuit to the 
-user based on the file it reads in. 
-\subsubsection*{Milestone 5}Implement the topological sorting algorithm to 
+\subsubsection*{Milestone 4}Implement the topological sorting algorithm to 
 measure and find the best point to debug a faulty or inefficient optical 
 device within the circuit. I know this part will take me a little longer 
 because there will be a lot of trial and error to fine-tune the algorithm 
 and there might be a chance that I need to use a completely different algorithm 
 than I anticipated. For that reason, I am giving myself more time to make 
-sure I can find a good efficient algorithm. 
+sure I can find a good efficient algorithm.
+\subsubsection*{Milestone 5}I will move on to the final part of the program
+which will be to visually represent the circuit I read from a file to 
+the user in the program through a graphical user interface (GUI).  
+I want the GUI to show the design of the circuit and outline the different 
+parts within the circuit so the user can see each optical device within it. 
+I also want to display any important information about the circuit to the 
+user based on the file it reads in.
+
+ 
 \subsubsection*{Milestone 6}At this point, I should have everything I wanted 
 to implement in my program completed and will be fixing up all my code and making 
 improvements where they need to be to make sure my GUI looks clean and easy 
@@ -589,7 +592,7 @@ grades as well as beginning to study for my finals.
 
 \subsection{Components to be Purchased/Built}
 This project will be built using python which is an open source programing 
-language that I will used to build the program. A computer that has 
+language that I will use to build the program. A computer that has 
 python installed on it and the VS Code application is the only current
 item on the bill of materials, which have been acquired. However, some books 
 may need to be purchased to answer questions if my current available resources
@@ -599,7 +602,7 @@ cannot answer them.
 Testing of my program will happen at different stages like testing the data structure, file system and reading circuit.
 I will follow my design plan starting with creating the data structure
 that will store the transfer matrices for each circuit. Once I can store the
-circuit, I will move onto being able to reade a file type that contains multiple
+circuit, I will move onto being able to read a file type that contains multiple
 transfer matrices. After, I will put these two pieces together to be able to
 represent the circuit and simulate the output. Finally, I will have to test different
 topological algorithms that will help with locating weak output points in the circuit.
