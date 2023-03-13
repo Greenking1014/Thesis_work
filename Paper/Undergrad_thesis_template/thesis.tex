@@ -1,0 +1,98 @@
+\documentclass[12pt,Chicago]{uuthesis2e}
+\usepackage[letterpaper]{geometry}
+
+\let \proof    = \relax
+\let \endproof = \relax
+\usepackage {amsthm}
+\usepackage{mathpazo}
+\fourlevels
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage {bm}
+\usepackage {bibnames}
+\usepackage {citesort}
+\usepackage {graphicx}
+\usepackage {graphpap}
+\usepackage {longtable}
+\usepackage {multirow}
+\usepackage {tikz}
+\usetikzlibrary {decorations.markings}
+\usepackage {varioref}
+\usepackage
+{
+    cite, 
+    epsfig,
+    epstopdf, 
+    color, 
+    float,
+    subfig,
+    xspace,
+    tabularx,
+    rotating,
+    lscape,
+    afterpage,
+    url,
+    listings,
+	hhline
+} 
+
+\usepackage[ruled]{./algorithm2e}
+\usepackage {uuthesis-2016-h}  % MANDATORY package
+\usepackage {mythesis}
+
+\newtheorem{Theorem}{Theorem}[chapter]
+\newtheorem{Definition}{Definition}[chapter]
+\newtheorem{Example}{Example}[chapter]
+\newtheorem{Proposition}{Proposition}[chapter]
+\newtheorem{Lemma}{Lemma}[chapter]
+\newtheorem{Corollary}{Corollary}[chapter]
+
+\title{Abstraction Models For\\ Manufacturability Aware Silicon Photonics} 
+\author{Carlos Daniel Gonzalez-Campos} 
+\thesistype{thesis}
+\degree{Bachelor of Science}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chairtitle{Professor}
+\committeechair{Priyank Kalla}
+% \firstreader{Pierre-Emmanuel Gaillardon}
+% \secondreader{Chris Myers}
+% \thirdreader{Kenneth Stevens}
+%\graduatedean{DAVID KIEDA}
+\department{Department of Electrical and Computer Engineering}
+\departmentchair{FLORIAN SOLZBACHER}
+
+\submitdate{May 2023}
+\copyrightyear{2023}
+\dedication{Dedications, if any !! }
+
+\begin{document}
+
+%% Comment out items by inserting a percent % character
+\frontmatterformat
+\titlepage
+\copyrightpage
+%\committeeapproval
+%\readingapproval
+% \setcounter {page}     {2}             % UofU Thesis Office demands abstract on p. iii: start one lower
+\preface{abstract} {Abstract}
+\dedicationpage
+\tableofcontents
+\listoffigures
+\listoftables
+%
+\maintext       % Start normal page numbering: parts and chapters follow.
+
+\pagestyle{headings} % NEW for sample-thesis-6
+%\input{chapter1.tex}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+
+\numberofappendices = 0
+
+\bibliographystyle{ieee}
+\bibliography{vikas}
+
+\end {document}

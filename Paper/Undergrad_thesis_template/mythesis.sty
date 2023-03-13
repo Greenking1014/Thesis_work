@@ -1,0 +1,96 @@
+%%% -*-LaTeX-*-
+%%% This is mythesis.sty.
+%%% Put your own private macro definitions, and style modifications, here.
+%%%
+%%% However, avoid introducing shorthands for standard LaTeX markup,
+%%% such as \beq and \eeq for \begin{equation} and \end{equation},
+%%% because it makes your input unreadable to others, and publishers
+%%% may reject your LaTeX files because nonstandard markup interferes
+%%% with their large-volume production practices.
+
+\newcommand {\mainindex}   [1] {\index{#1|mainpage}}
+\newcommand {\mainpage}    [1] {\textbf{#1}}
+
+\newcommand {\gobblearg}   [1] {}
+
+\newcommand {\figlabel}    [1] {\label{fig:#1}}
+\newcommand {\tablabel}    [1] {\label{tab:#1}}
+
+%%: \newcommand {\shortfigref} [1] {{\color {utahheadingcolor}\textbf{Figure~\ref{fig:#1}}}}
+%%: \newcommand {\figref}      [1] {{\color {utahheadingcolor}\textbf{Figure~\ref{fig:#1}}} \vpageref{fig:#1}}
+%%: \newcommand {\tabref}      [1] {{\color {utahheadingcolor}\textbf{Table~\ref{tab:#1}}}  \vpageref{tab:#1}}
+
+\newcommand {\shortfigref} [1] {{\textbf{Figure~\ref{fig:#1}}}}
+\newcommand {\figref}      [1] {{\textbf{Figure~\ref{fig:#1}}} \vpageref{fig:#1}}
+
+\newcommand {\shorttabref} [1] {{\textbf{Table~\ref{tab:#1}}}}
+\newcommand {\tabref}      [1] {{\textbf{Table~\ref{tab:#1}}}  \vpageref{tab:#1}}
+
+\newcommand{\blah}
+{%
+    Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+    Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+    Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+}
+% \newcommand{\B}{{\mathbb{B}}}
+% \newcommand{\Z}{{\mathbb{Z}}}
+% \newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+% \newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Zn}{{\mathbb{Z}}_{n}}
+\newcommand{\Zp}{{\mathbb{Z}}_{p}}
+% \newcommand{\F}{{\mathbb{F}}}
+\newcommand{\FF}{{\mathcal{F}}}
+\newcommand{\Fbar}{{\overline{\mathbb{F}}}}
+% \newcommand{\Fq}{{\mathbb{F}}_{q}}
+\newcommand{\Fqbar}{\overline{\mathbb{F}}_q}
+% \newcommand{\Fkk}{{\mathbb{F}}_{2^k}}
+% \newcommand{\Zkk}{{\mathbb{Z}}_{2^k}}
+% \newcommand{\Fkkx}[1][x]{\ensuremath{\mathbb{F}}_{2^k}[#1]\xspace}
+\newcommand{\SSS}{\mathbb{S}}
+% \newcommand{\Grobner}{Gr\"{o}bner\xspace}
+% \newcommand{\bi}{\begin{itemize}}
+% \newcommand{\ei}{\end{itemize}}
+\newcommand{\impl}{{\it Impl}}
+\newcommand{\spec}{{\it Spec}}
+
+\newcommand{\idealj}{{J = \langle f_1, \dots, f_s\rangle}}
+\newcommand{\idealg}{{J = \langle g_1, \dots, g_t\rangle}}
+\newcommand{\vfqj}{{V_{\Fq}(J)}}
+\newcommand{\vfkkj}{{V_{\Fkk}(J)}}
+
+%%% Added by Utkarsh %%%
+\newcommand{\Va}{{V_A}}
+\newcommand{\Vb}{{V_B}}
+\newcommand{\Vc}{{V_C}}
+\newcommand{\Vbc}{{V_{B,C}}}
+\newcommand{\Vabc}{{V_{A,B,C}}}
+\newcommand{\Vac}{{V_{A,C}}}
+\newcommand{\w}{\wedge}
+\newcommand{\al}{\alpha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\blu}{\color{blue}}
+% \newcommand{\Grobner}{Gr\"{o}bner\xspace}
+\newcommand{\fqring}{\Fq[x_1,\dots,x_n]}
+\newcommand{\ov}{\bar}
+\newcommand{\xor}{\bigoplus}
+%\newtheorem{definition}{Definition}[section]
+\newcommand{\tab}{\xspace\ \ \ \ \xspace}
+\newcommand{\ttab}{\xspace\ \ \xspace}
+\newcommand{\eqntext}[1]{\text{\xspace\rm #1\xspace}}
+\newcommand{\Fq}{{\mathbb{F}}_{q}}
+\newcommand{\Fkk}{{\mathbb{F}}_{2^k}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Zkk}{{\mathbb{Z}}_{2^k}}
+\newcommand{\Fkkx}[1][x]{\ensuremath{\mathbb{F}}_{2^k}[#1]\xspace}
+\newcommand{\Grobner}{Gr\"{o}bner\xspace}
+\newcommand{\Func}{{\mathcal{F}}}
+\newcommand{\G}{{\mathcal{G}}}
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\B}{{\mathbb{B}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\K}{{\mathbb{K}}}

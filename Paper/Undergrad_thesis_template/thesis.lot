@@ -1,0 +1,2 @@
+\contentsline {table}{\numberline {1.1}{\ignorespaces Single-fix rectification of integer multiplier against polynomial specification. Time in seconds; k = Datapath size, $t_1$ = verification time, $t_2$ = time to find potentially rectifiable nets , $t_3$ = time for rectification check, $t_4$ = time to compute rectification function. Time Out = 10800 seconds.\relax }}{3}{}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Evaluating $h_i$ and $h_i'$\relax }}{7}{}%

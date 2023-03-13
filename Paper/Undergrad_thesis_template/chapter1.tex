@@ -1,0 +1,51 @@
+\chapter{Introduction}
+\label{ch:intro1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt eros ut dictum tempor. Proin rhoncus elementum mauris, ac bibendum quam. Sed eget nisi non arcu malesuada pulvinar a at ipsum. Curabitur ante quam, aliquet id purus ac, interdum semper odio. Suspendisse potenti. Aliquam rhoncus massa consectetur faucibus condimentum. Sed euismod tellus eu mattis elementum. In nec laoreet ligula. Donec vel blandit ante. Mauris non ligula non justo venenatis rhoncus. In quis auctor ipsum, in mattis lacus. In vitae lectus sodales arcu iaculis bibendum. Fusce ornare at ex vitae ultricies.
+
+Nullam sagittis maximus leo, sit amet dictum neque suscipit at. Proin sagittis mollis mi, at ornare ligula ornare nec. Donec et pulvinar mi. Nulla ac semper dui, id mollis ante. Nam cursus vel tellus quis maximus. Vestibulum quis nunc sit amet felis mollis facilisis sed a sapien. Sed sit amet nisi velit. Mauris tellus arcu, commodo in feugiat in, porttitor vitae urna. Vivamus in aliquet elit. Nunc quis dui massa. Morbi blandit fringilla dui et fermentum. Nulla facilisi. Aenean et dui turpis. Mauris tempor diam ac mi scelerisque lacinia.\cite{fv_graph:book}, as shown in Fig. \ref{fig:fv_graph}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{fv_graph.PNG}
+    \caption{Design vs. Verification Complexity}
+    \label{fig:fv_graph}
+\end{figure}
+
+\section{Hardware Design Overview}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt eros ut dictum tempor. Proin rhoncus elementum mauris, ac bibendum quam. Sed eget nisi non arcu malesuada pulvinar a at ipsum. Curabitur ante quam, aliquet id purus ac, interdum semper odio. Suspendisse potenti. Aliquam rhoncus massa consectetur faucibus condimentum. Sed euismod tellus eu mattis elementum. In nec laoreet ligula. Donec vel blandit ante. Mauris non ligula non justo venenatis rhoncus. In quis auctor ipsum, in mattis lacus. In vitae lectus sodales arcu iaculis bibendum. Fusce ornare at ex vitae ultricies.
+
+Nullam sagittis maximus leo, sit amet dictum neque suscipit at. Proin sagittis mollis mi, at ornare ligula ornare nec. Donec et pulvinar mi. Nulla ac semper dui, id mollis ante. Nam cursus vel tellus quis maximus. Vestibulum quis nunc sit amet felis mollis facilisis sed a sapien. Sed sit amet nisi velit. Mauris tellus arcu, commodo in feugiat in, porttitor vitae urna. Vivamus in aliquet elit. Nunc quis dui massa. Morbi blandit fringilla dui et fermentum. Nulla facilisi. Aenean et dui turpis. Mauris tempor diam ac mi scelerisque lacinia.
+
+\subsection{Formal verification}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | l | l | l | l |}
+    \hline
+    $k$ & $t_1$ & $t_2$ & $t_3$ & $t_4$ \\ \hline
+    2 & 0.002 & 0.003 & 0.007 & 0.005 \\ \hline
+    4 & 0.005 & 5.820 & 0.024 & 5.824 \\ \hline
+    8 & 0.027 & 9.103 & 0.206 & 9.111 \\ \hline
+    12 & 0.120 & 23.137 & 0.641 & 23.158 \\ \hline
+    16 & 0.400 & 42.915 & 1.782 & 42.981 \\ \hline
+    18 & 0.647 & 48.964 & 2.479 & 49.060  \\ \hline
+    28 & 6.329 & 288.448 & 26.707  & 289.860\\ \hline
+    32 & 12.119 & 368.319 & 44.965 & 370.579 \\ \hline
+    56 & 292.203 & 980.283 & 1221.654 & 1040.504 \\ \hline
+    64 & 577.162 & 16.049 & 28.597 & 20.147 \\
+    \hline
+    \end{tabular}
+    \caption{Single-fix rectification of integer multiplier against polynomial specification. Time in seconds; k = Datapath size, $t_1$ = verification time, $t_2$ = time to find potentially rectifiable nets , $t_3$ = time for rectification check, $t_4$ = time to compute rectification function. Time Out = 10800 seconds.}
+    \label{tb:tb1}
+\end{table}
+It subsequently describes how to select a net which admits single-fix rectification. Chapter \ref{ch:rectfunc} describes a procedure to compute a suitable rectification polynomial which, when implemented \ref{tb:tb1}
+
+\section{Formal verification of integer arithmetic circuits}
+
+Nullam sagittis maximus leo, sit amet dictum neque suscipit at. Proin sagittis mollis mi, at ornare ligula ornare nec. Donec et pulvinar mi. Nulla ac semper dui, id mollis ante. Nam cursus vel tellus quis maximus. Vestibulum quis nunc sit amet felis mollis facilisis sed a sapien. Sed sit amet nisi velit. Mauris tellus arcu, commodo in feugiat in, porttitor vitae urna. Vivamus in aliquet elit. Nunc quis dui massa. Morbi blandit fringilla dui et fermentum. Nulla facilisi. Aenean et dui turpis. Mauris tempor diam ac mi scelerisque lacinia.
+
+\section{Thesis Organization}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt eros ut dictum tempor. Proin rhoncus elementum mauris, ac bibendum quam. Sed eget nisi non arcu malesuada pulvinar a at ipsum. Curabitur ante quam, aliquet id purus ac, interdum semper odio. Suspendisse potenti. Aliquam rhoncus massa consectetur faucibus condimentum. Sed euismod tellus eu mattis elementum. In nec laoreet ligula. Donec vel blandit ante. Mauris non ligula non justo venenatis rhoncus. In quis auctor ipsum, in mattis lacus. In vitae lectus sodales arcu iaculis bibendum. Fusce ornare at ex vitae ultricies \ref{ch:rectfunc}.
+
+Nullam sagittis maximus leo, sit amet dictum neque suscipit at. Proin sagittis mollis mi, at ornare ligula ornare nec. Donec et pulvinar mi. Nulla ac semper dui, id mollis ante. Nam cursus vel tellus quis maximus. Vestibulum quis nunc sit amet felis mollis facilisis sed a sapien. Sed sit amet nisi velit. Mauris tellus arcu, commodo in feugiat in, porttitor vitae urna. Vivamus in aliquet elit. Nunc quis dui massa. Morbi blandit fringilla dui et fermentum. Nulla facilisi. Aenean et dui turpis. Mauris tempor diam ac mi scelerisque lacinia.

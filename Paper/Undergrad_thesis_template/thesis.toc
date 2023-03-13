@@ -1,0 +1,29 @@
+\contentsline {chapter}{\uppercase {Abstract}}{}{}%
+\contentsline {chapter}{LIST OF FIGURES}{iii}{}%
+\contentsline {chapter}{LIST OF TABLES}{iv}{}%
+\unhbox \voidb@x \\[-1.2ex] \kern -1.5em\contentsline {}{\textbf {CHAPTERS}}{}
+\contentsline {chapter}{\numberline {1.}\hyphenpenalty =10000\exhyphenpenalty =10000\relax \linepenalty =0 \uppercase {Introduction}\global \uuthesis@needtocspacetrue }{1}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {section}{\numberline {1.1}Hardware Design Overview}{2}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {subsection}{\numberline {1.1.1}Formal verification}{3}{}%
+\contentsline {section}{\numberline {1.2}Formal verification of integer arithmetic circuits}{3}{}%
+\contentsline {section}{\numberline {1.3}Thesis Organization}{3}{}%
+\contentsline {chapter}{\numberline {2.}\hyphenpenalty =10000\exhyphenpenalty =10000\relax \linepenalty =0 \uppercase {Computing Rectification function}\global \uuthesis@needtocspacetrue }{5}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {section}{\numberline {2.1}Problem Statement}{5}{}%
+\contentsline {section}{\numberline {2.2}Computing rectification function}{6}{}%
+\contentsline {subsection}{\numberline {2.2.1}Procedure to compute rectification function}{7}{}%
+\contentsline {section}{\numberline {2.3}Conclusion}{7}{}%
+\contentsline {chapter}{\numberline {3.}\hyphenpenalty =10000\exhyphenpenalty =10000\relax \linepenalty =0 \uppercase {Conclusions and future work}\global \uuthesis@needtocspacetrue }{9}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {section}{\numberline {3.1}Future Work}{9}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {subsection}{\numberline {3.1.1}Computing multiple rectification functions}{9}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {subsection}{\numberline {3.1.2}Dependency constrained rectification function}{10}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {subsection}{\numberline {3.1.3}Impact of term orders on efficiency}{11}{}%
+\ifuuthesis@needtocspace \vspace {\uuthesis@chaptersectionspace } \fi \global \uuthesis@needtocspacefalse 
+\contentsline {subsection}{\numberline {3.1.4}Multi-fix rectification}{11}{}%
+\contentsline {chapter}{REFERENCES}{12}{}%

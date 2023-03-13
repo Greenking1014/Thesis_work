@@ -1,0 +1,3 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Design vs. Verification Complexity\relax }}{2}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 2-bit Integer multiplier with a bug. The AND gate at $g_4$ replaced by an XOR gate.\relax }}{6}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 2-bit integer multiplier with redundancy. Bug at $I$.\relax }}{10}{}%
