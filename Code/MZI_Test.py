@@ -19,6 +19,7 @@ import numpy as np
 
 ####### Testing Area #######
 
+
 # FOR INPUT X_3_X_2_X_1_X_0 = 0100
 #First MZI X_3
 print('First MZI X_3')
