@@ -25,10 +25,11 @@ import numpy as np
 print('First MZI X_3')
 G_o = symbols('G_o')
 mziX_3 = MZI(0)
+print(mziX_3.name)
 print(mziX_3.matrix_eq)
 Input_1 = sym.Matrix([[1],[G_o]])
 F_o_F_1 =([mziX_3.matrix_eq*Input_1])
-print(F_o_F_1)
+#print(F_o_F_1)
 
 print('')
 
