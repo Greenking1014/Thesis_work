@@ -31,3 +31,16 @@ print(mziX_3.matrix_eq)
 
 F_o_F_1 =(mziX_3.f_Output)
 print(F_o_F_1)
+
+print('')
+
+#Second MZI X_2
+print('Second MZI X_2')
+G_3 = F_o_F_1[0][1]
+G_1 = symbols('G_1')
+Input_2 = sym.Matrix([[G_1],[G_3]])
+mziX_2 = MZI(1,None,Input_2)
+print(mziX_2.name)
+print(mziX_2.matrix_eq)
+F_2_F_3 = (mziX_2.g_Output)
+print(F_2_F_3)

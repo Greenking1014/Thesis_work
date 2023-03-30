@@ -17,9 +17,9 @@ class MZI:
             matrix3 = Matrix([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
             self.matrix_eq = matrix2.multiply(matrix3)
             if(p_Input != None):
-                self.f_Output = self.matrix_eq * self.p_Input     
+                self.f_Output = [self.matrix_eq * self.p_Input]     
             if(q_Input != None):
-                self.g_Output =self.matrix_eq * self.q_Input
+                self.g_Output = [self.matrix_eq * self.q_Input]
             self.name = "Matrix MZI bar_configuration (S=0)"
         elif (config_selection == 1):
             matrix1 = Matrix ([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
@@ -27,9 +27,9 @@ class MZI:
             matrix3 = Matrix([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
             self.matrix_eq = matrix2.multiply(matrix3)
             if(p_Input != None):
-                self.g_Output = self.matrix_eq * self.p_Input
+                self.g_Output = [self.matrix_eq * self.p_Input]
             if(q_Input != None):
-                self.f_Output = self.matrix_eq * self.q_Input
+                self.f_Output = [self.matrix_eq * self.q_Input]
             self.name = "Matrix MZI cross_configuration (S=1)"
         elif (config_selection == 2):
             self.phi_1 = 2.4
@@ -38,9 +38,9 @@ class MZI:
             matrix3 = Matrix([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
             self.matrix_eq = matrix3.multiply(matrix2.multiply(matrix1))
             if(p_Input != None):
-                self.f_Output = self.matrix_eq * self.p_Input     
+                self.f_Output = [self.matrix_eq * self.p_Input]    
             if(q_Input != None):
-                self.g_Output =self.matrix_eq * self.q_Input
+                self.g_Output = [self.matrix_eq * self.q_Input]
             self.name = "Matrix MZI bar_configuration (S=0) deformed"
         
         
