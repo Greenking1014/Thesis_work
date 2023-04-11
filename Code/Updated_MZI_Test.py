@@ -128,5 +128,5 @@ G_4 = F_2_F_3[0][1]
 G_5 = F_o_F_1[0][0]
 Input_3 = sym.Matrix([[G_4],[G_5]])
 Z_i_F_4 = ([mzi_3.matrix_eq*Input_3])
-print(Z_i_F_4)
+#print(Z_i_F_4)
 print(np.abs(Z_i_F_4))
