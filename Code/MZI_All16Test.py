@@ -2,9 +2,16 @@ from MZI import MZI
 import sympy as sym
 from sympy import symbols
 import numpy as np
+import pandas as pd
+
+
+# create a list of inputs
+inputs = []
+power_output = []
 
 for i in range(16):
     input = "{0:04b}".format(i)
+    inputs.append(input)
     # FOR INPUT X_3_X_2_X_1_X_0 = 0100
     #First MZI X_3
     X_3 = int(input[0])
@@ -106,7 +113,12 @@ for i in range(16):
     Z_i_F_4 = ([mzi_1.matrix_eq*Input_3])
     print(Z_i_F_4)
     print(np.abs(Z_i_F_4))
+    power_output.append(np.abs(Z_i_F_4))
     print( "This is the end of the test: ", input)
     print('---------------------------------------')
+    
+dataTable = pd.DataFrame(index=inputs)
+dataTable['Power Output'] = power_output
+print(dataTable)
         
     
