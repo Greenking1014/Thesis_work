@@ -34,6 +34,15 @@ class MZI:
             if(input != None):
                 self.output = [self.matrix_eq * self.input]
             self.name = "Matrix MZI bar_configuration (S=0) deformed"
+        elif (config_selection == 3):
+            self.phi_1 = 2.4
+            matrix1 = Matrix ([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
+            matrix2 = Matrix([[-cmath.rect(self.r,self.phi_1),0],[0,cmath.rect(self.r,0)]])
+            matrix3 = Matrix([[0.707, -0.707*self.x],[-0.707*self.x, 0.707]])
+            self.matrix_eq = matrix3.multiply(matrix2.multiply(matrix1))
+            if(input != None):
+                self.output = [self.matrix_eq * self.input]
+            self.name = "Matrix MZI cross_configuration (S=1) deformed"
         
         
     def multiply(self, mzi_matrix):
