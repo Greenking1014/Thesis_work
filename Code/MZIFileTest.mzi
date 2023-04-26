@@ -1,2 +1,13 @@
-input=
-mzi_1()
+input_1 = [1], [G_o]
+mzi_1 = (0,input_1)
+input_2 = [G_1],[mzi_1.output[0][1]]
+mzi_2 = (1,input_2)
+input_3 = [mzi_2.output[0][1]],[mzi_1.output[0][0]]
+mzi_3 = (0,input_3)
+input_4 = [G_6],[mzi_3.output[0][1]]
+mzi_4 = (0,input_4)
+input_5 = [0],[mzi_4.output[0][0]]
+mzi_5 = (0,input_5)
+input_4 = [mzi_5.output[0][0]],[mzi_3.output[0][1]]
+input_2 = [mzi_4.output[0][0]],[mzi_1.output[0][1]]
+input_3 = [mzi_2.output[0][1]],[mzi_1,output[0][0]]

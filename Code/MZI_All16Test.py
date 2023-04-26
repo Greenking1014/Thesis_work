@@ -74,11 +74,15 @@ for i in range(16):
 
     print('---------------------------------------')
 
-    #Deformed Fifth MZI X_0
+    # #Deformed Fifth MZI X_0
     # print('Deformed Fifth MZI S =', X_0)
+    # if X_0 == 0:
+    #     selection = 2
+    # elif X_0 == 1:
+    #     selection = 3
     # G_8 = F_5_F_6[0][1]
     # Input_5 = sym.Matrix([[0], [G_8]])
-    # mziDeform = MZI(2, Input_5)
+    # mziDeform = MZI(selection, Input_5)
     # F_7_F_8 = (mziDeform.output)
     # print(F_7_F_8)
 
@@ -119,6 +123,6 @@ for i in range(16):
     
 dataTable = pd.DataFrame(index=inputs)
 dataTable['Power Output'] = power_output
-print(dataTable)
+print(dataTable.to_string())
         
     
