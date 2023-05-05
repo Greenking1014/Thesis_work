@@ -4,6 +4,8 @@ from sympy import symbols
 import numpy as np
 import pandas as pd
 
+#Set deformed option
+deforemed = False
 
 # create a list of inputs
 inputs = []
@@ -63,31 +65,30 @@ for i in range(16):
     print(F_5_F_6)
 
     print('---------------------------------------')
-
-    #Fifth MZI X_0
-    print('Fifth MZI S =', X_0)
-    G_8 = F_5_F_6[0][0]
-    Input_5 = sym.Matrix([[0], [G_8]])
-    mzi_5= MZI(X_0,Input_5)
-    F_7_F_8 = (mzi_5.output)
-    print (F_7_F_8)
-
-    print('---------------------------------------')
-
-    # #Deformed Fifth MZI X_0
-    # print('Deformed Fifth MZI S =', X_0)
-    # if X_0 == 0:
-    #     selection = 2
-    # elif X_0 == 1:
-    #     selection = 3
-    # G_8 = F_5_F_6[0][1]
-    # Input_5 = sym.Matrix([[0], [G_8]])
-    # mziDeform = MZI(selection, Input_5)
-    # F_7_F_8 = (mziDeform.output)
-    # print(F_7_F_8)
-
-
-    print('---------------------------------------')
+    
+    if deforemed:
+        #Deformed Fifth MZI X_0
+        print('Deformed Fifth MZI S =', X_0)
+        if X_0 == 0:
+            selection = 2
+        elif X_0 == 1:
+            selection = 3
+        G_8 = F_5_F_6[0][1]
+        Input_5 = sym.Matrix([[0], [G_8]])
+        mziDeform = MZI(selection, Input_5)
+        F_7_F_8 = (mziDeform.output)
+        print(F_7_F_8)
+        print('---------------------------------------')
+        
+    else:
+        #Fifth MZI X_0
+        print('Fifth MZI S =', X_0)
+        G_8 = F_5_F_6[0][0]
+        Input_5 = sym.Matrix([[0], [G_8]])
+        mzi_5= MZI(X_0,Input_5)
+        F_7_F_8 = (mzi_5.output)
+        print (F_7_F_8)
+        print('---------------------------------------') 
 
     #Using First MZI X_3
     print('First MZI S =', X_3)

@@ -5,20 +5,7 @@ import numpy as np
 
 
 ####### Testing Area #######
-# Bar config
-# mzi1 = MZI(0)
-
-# # Cross config
-# mzi2 = MZI(1)
-
-# print(mzi1.name)
-# print(mzi1.matrix_eq)
-# print(mzi1.matrix_eq[0,0])
-# print(mzi2.name)
-# print(mzi2.matrix_eq)
-
-####### Testing Area #######
-
+Deformed = False
 
 # FOR INPUT X_3_X_2_X_1_X_0 = 0100
 #First MZI X_3
@@ -74,29 +61,33 @@ print(F_5_F_6)
 
 print('---------------------------------------')
 
-# #Fifth MZI S = X_0
-# print('Fifth MZI S = X_0')
-# G_8 = F_5_F_6[0][0]
-# Input_5 = sym.Matrix([[0], [G_8]])
-# mzi_5= MZI(0,Input_5)
-# print(mzi_5.name)
-# print(mzi_5.matrix_eq)
-# F_7_F_8 = (mzi_5.output)
-# print (F_7_F_8)
+if Deformed:
+        #Deformed Fifth MZI X_0
+    print('Deformed Fifth MZI S = X_0')
+    G_8 = F_5_F_6[0][1]
+    Input_5 = sym.Matrix([[0], [G_8]])
+    mzi_5_Defor = MZI(2,Input_5)
+    print(mzi_5_Defor.name)
+    print(mzi_5_Defor.matrix_eq)
+    F_7_F_8 = (mzi_5_Defor.output)
+    print(F_7_F_8)
 
-# print('---------------------------------------')
+    print('---------------------------------------')
+    
+ 
+else:
+    #Fifth MZI S = X_0
+    print('Fifth MZI S = X_0')
+    G_8 = F_5_F_6[0][0]
+    Input_5 = sym.Matrix([[0], [G_8]])
+    mzi_5= MZI(0,Input_5)
+    print(mzi_5.name)
+    print(mzi_5.matrix_eq)
+    F_7_F_8 = (mzi_5.output)
+    print (F_7_F_8)
+    
+    print('---------------------------------------')
 
-#Deformed Fifth MZI X_0
-print('Deformed Fifth MZI S = X_0')
-G_8 = F_5_F_6[0][1]
-Input_5 = sym.Matrix([[0], [G_8]])
-mzi_5_Defor = MZI(2,Input_5)
-print(mzi_5_Defor.name)
-print(mzi_5_Defor.matrix_eq)
-F_7_F_8 = (mzi_5_Defor.output)
-print(F_7_F_8)
-
-print('---------------------------------------')
 
 #Using Fourth MZI X_3
 print('Fourht MZI S = X_3')
@@ -129,4 +120,5 @@ G_5 = F_o_F_1[0][0]
 Input_3 = sym.Matrix([[G_4],[G_5]])
 Z_i_F_4 = ([mzi_3.matrix_eq*Input_3])
 #print(Z_i_F_4)
+print('The output of the circuit is:')
 print(np.abs(Z_i_F_4))
