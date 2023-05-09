@@ -3,6 +3,7 @@ import sympy as sym
 from sympy import symbols
 import numpy as np
 import pandas as pd
+import time
 
 #Set deformed option
 deforemed = False
@@ -10,6 +11,7 @@ deforemed = False
 # create a list of inputs
 inputs = []
 power_output = []
+durations = []
 
 for i in range(16):
     input = "{0:04b}".format(i)
@@ -22,6 +24,8 @@ for i in range(16):
     X_0 = int(input[3])
     #print (X_3,X_2,X_1,X_0)
     print("This is the begining of test: ",input)
+    
+    start_time = time.time()
     
     print('First MZI S =', X_3 )
     G_o = symbols('G_o')
@@ -119,11 +123,14 @@ for i in range(16):
     print(Z_i_F_4)
     print(np.abs(Z_i_F_4))
     power_output.append(np.abs(Z_i_F_4))
+    simulation_time = time.time() - start_time
+    durations.append(simulation_time)
     print( "This is the end of the test: ", input)
     print('---------------------------------------')
     
 dataTable = pd.DataFrame(index=inputs)
 dataTable['Power Output'] = power_output
+dataTable['Simulation time (sec)'] = durations
 print(dataTable.to_string())
         
     

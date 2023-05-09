@@ -90,14 +90,12 @@ else:
 
 
 #Using Fourth MZI X_3
-print('Fourht MZI S = X_3')
+print('Fourth MZI S = X_3')
 G_6 = F_7_F_8[0][0]
 G_7 = Z_i_F_4[0][1]
 Input_4 = sym.Matrix([[G_6],[G_7]])
-F_5_F_6 = ([mzi_4.matrix_eq*Input_4])  # Uses the first mzi matrix equation
-                                #Should I keep it this way to make sure no new Mzi.
-                                # also how does this translate to the file reader? 
-                                # there is an order it goes in so how can i make sure it follows that order?
+F_5_F_6 = ([mzi_4.matrix_eq*Input_4]) 
+                               
                                 
 print(F_5_F_6)
 

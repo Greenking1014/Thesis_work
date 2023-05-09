@@ -2,9 +2,7 @@ from sympy import *
 
 import cmath
 class MZI:
-    def __init__(self, config_selection, input): #Could pass in a deformity variable def
-        # self.phi_1 = np.pi
-        # self.phi_2 = 0
+    def __init__(self, config_selection, input): 
         self.x = complex(0,1)
         self.r = 1
         self.input = input
@@ -45,11 +43,4 @@ class MZI:
             self.name = "Matrix MZI cross_configuration (S=1) deformed"
         
         
-    def multiply(self, mzi_matrix):
-        
-        return self.matrix_eq.multiply(mzi_matrix.matrix_eq)
-
-    #
-    # Can add useful information here later
-    #
 
